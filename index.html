@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cine Estelar</title>
+    <!-- Enlazamos la hoja de estilos externa -->
+    <link rel="stylesheet" href="estilos.css" />
+    <style>
+        /* Estilo bonito para el botón Más Información */
+        .boton-mas-info {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 22px;
+            background: linear-gradient(135deg, #ff6f61, #e04e3a);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(255, 111, 97, 0.6);
+            cursor: pointer;
+            transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            user-select: none;
+            text-align: center;
+        }
+        .boton-mas-info:hover,
+        .boton-mas-info:focus {
+            background: linear-gradient(135deg, #e04e3a, #ff6f61);
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(224, 78, 58, 0.8);
+            outline: none;
+        }
+
+        /* Ocultamos por defecto los detalles */
+        .detalle-pelicula {
+            display: none;
+            margin-top: 10px;
+            background: #f8f8f8;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header>
+        <h1>Cine Estelar</h1>
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección de cartelera de películas -->
+        <section class="cartelera">
+            <h2>Cartelera</h2>
+            <div class="peliculas">
+                <!-- Película 1 -->
+                <article class="pelicula">
+                    <img src="imagnes/m1.jpg" alt="Película 1" />
+                    <h3>La Gran Aventura</h3>
+                    <p>Una emocionante historia de acción y amistad.</p>
+                    <button class="btn-detalle boton-mas-info" onclick="toggleDetalle(this)">Más información</button>
+                    <div class="detalle-pelicula">
+                        <p>
+                            Esta película sigue a un grupo de amigos que enfrentan grandes desafíos mientras viajan alrededor del mundo en busca de un tesoro escondido. Acción, suspenso y valores de amistad.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=pdA2AXnmUKI" target="_blank">Ver trailer</a>
+                </article>
+
+                <!-- Película 2 -->
+                <article class="pelicula">
+                    <img src="imagnes/m2.jpg" alt="Película 2" />
+                    <h3>Amor en París</h3>
+                    <p>Una comedia romántica que te hará reír y llorar.</p>
+                    <button class="btn-detalle boton-mas-info" onclick="toggleDetalle(this)">Más información</button>
+                    <div class="detalle-pelicula">
+                        <p>
+                            Esta comedia romántica narra la historia de dos desconocidos que se encuentran en la ciudad del amor, enfrentando malentendidos y momentos divertidos que cambiarán sus vidas para siempre.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=3T4EPVv79as" target="_blank">Ver trailer</a>
+                </article>
+
+                <!-- Película 3 -->
+                <article class="pelicula">
+                    <img src="imagnes/m3.jpeg" alt="Película 3" />
+                    <h3>Turno Nocturno</h3>
+                    <p>Un thriller lleno de giros inesperados.</p>
+                    <button class="btn-detalle boton-mas-info" onclick="toggleDetalle(this)">Más información</button>
+                    <div class="detalle-pelicula">
+                        <p>
+                            En esta oscura historia, una enfermera descubre secretos inquietantes durante su turno nocturno en un hospital, enfrentándose a eventos que desafían la realidad y su propia cordura.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=PqoCnUgs46A" target="_blank">Ver trailer</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Cine Estelar. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para toggle de detalles -->
+    <script>
+        function toggleDetalle(boton) {
+            const detalle = boton.nextElementSibling;
+            if (detalle.style.display === "none" || detalle.style.display === "") {
+                detalle.style.display = "block";
+                boton.textContent = "Menos información";
+            } else {
+                detalle.style.display = "none";
+                boton.textContent = "Más información";
+            }
+        }
+    </script>
+</body>
+</html>
