@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Promociones - Cine Estelar</title>
+    <!-- Enlazamos la hoja de estilos externa -->
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header>
+        <h1>Cine Estelar</h1>
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="promociones.html" class="active">Promociones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="promociones">
+            <h2>Promociones Especiales</h2>
+            <div class="ofertas">
+                <!-- Promoción 1 -->
+                <article class="oferta">
+                    <img src="imagnes/imen2x1.png" alt="Promo 1" />
+                    <h3>2x1 en Entradas</h3>
+                    <p>Por cada entrada que compres, te regalamos otra. ¡Disfruta con un amigo o familiar!</p>
+                    <button class="btn-detalle" onclick="toggleDetalle(this)">Ver más detalles</button>
+                    <div class="detalle-oferta" style="display: none;">
+                        <p><strong>Información:</strong> Compra una entrada y obtén otra gratis para la misma función.</p>
+                        <p><strong>Condiciones que aplican:</strong> Promoción válida solo de lunes a jueves, no acumulable con otras ofertas.</p>
+                    </div>
+                </article>
+
+                <!-- Promoción 2 -->
+                <article class="oferta">
+                    <img src="imagnes/mfamiliar.jpg" alt="Promo 2" />
+                    <h3>Combo Familiar</h3>
+                    <p>Compra 4 entradas y llévate una canasta de palomitas y refrescos gratis. ¡Perfecto para la familia!</p>
+                    <button class="btn-detalle" onclick="toggleDetalle(this)">Ver más detalles</button>
+                    <div class="detalle-oferta" style="display: none;">
+                        <p><strong>Información:</strong> Incluye 4 entradas y una canasta familiar de palomitas y refrescos.</p>
+                        <p><strong>Condiciones que aplican:</strong> Oferta válida solo para funciones en fin de semana. Aplican restricciones de horario.</p>
+                    </div>
+                </article>
+
+                <!-- Promoción 3 -->
+                <article class="oferta">
+                    <img src="imagnes/m444.jpeg" alt="Promo 3" />
+                    <h3>Descuento para Estudiantes</h3>
+                    <p>Presenta tu credencial y obtén un 30% de descuento en todas las entradas.</p>
+                    <button class="btn-detalle" onclick="toggleDetalle(this)">Ver más detalles</button>
+                    <div class="detalle-oferta" style="display: none;">
+                        <p><strong>Información:</strong> Descuento válido para estudiantes con credencial vigente.</p>
+                        <p><strong>Condiciones que aplican:</strong> No válido en días festivos ni para premieres.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Cine Estelar. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para toggle de detalles -->
+    <script>
+        function toggleDetalle(boton) {
+            const detalle = boton.nextElementSibling;
+            if (detalle.style.display === "block") {
+                detalle.style.display = "none";
+                boton.textContent = "Ver más detalles";
+            } else {
+                detalle.style.display = "block";
+                boton.textContent = "Ver menos detalles";
+            }
+        }
+    </script>
+</body>
+</html>

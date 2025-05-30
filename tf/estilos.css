@@ -1,0 +1,251 @@
+/* --- RESET BÁSICO PARA UNIFICAR ESTILOS ENTRE NAVEGADORES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #212121;
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+
+/* --- ENCABEZADO PRINCIPAL --- */
+header {
+    background-color: #1c1c1c;
+    color: #E0E0E0;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+nav a {
+    color: #E0E0E0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+nav a:hover {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+nav a.active {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+main {
+    padding: 40px 20px;
+}
+
+/* Títulos secciones cartelera, promociones y contacto */
+.cartelera h2,
+.promociones h2,
+.contacto h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff6f61;
+}
+
+/* --- CONTENEDORES FLEXIBLES --- */
+.peliculas,
+.ofertas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* --- TARJETAS --- */
+.pelicula,
+.oferta {
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.pelicula:hover,
+.oferta:hover {
+    transform: translateY(-10px);
+}
+.pelicula img,
+.oferta img {
+    width: 100%;
+    object-fit: cover;
+}
+.pelicula img {
+    height: 300px;
+}
+.oferta img {
+    height: 150px;
+}
+.pelicula h3,
+.oferta h3 {
+    margin: 15px 0;
+    color: #ff6f61;
+}
+.pelicula h3 {
+    font-size: 1.25rem;
+}
+.oferta h3 {
+    font-size: 1.5rem;
+}
+.pelicula p,
+.oferta p,
+.contacto p {
+    color: #B0BEC5;
+    padding: 0 10px 15px;
+    font-size: 0.875rem;
+}
+.oferta p {
+    font-size: 1rem;
+}
+
+/* --- BOTONES --- */
+.pelicula a,
+.oferta a,
+.oferta button.btn-detalle {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.pelicula a:hover,
+.oferta a:hover,
+.oferta button.btn-detalle:hover {
+    background-color: #e04e3a;
+    transform: scale(1.1);
+}
+
+/* Detalles de la oferta */
+.detalle-oferta {
+    background-color: #3a3a3a;
+    color: #ccc;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: left;
+    display: none; /* oculto por defecto */
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    text-align: center;
+    background-color: #1c1c1c;
+    color: #E0E0E0;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+}
+
+/* --- SECCIÓN DE CONTACTO --- */
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+}
+
+.contacto-contenedor {
+    background-color: rgba(44, 44, 44, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 50px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+.contacto-contenedor h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff6f61;
+    padding-bottom: 10px;
+    color: #ff6f61;
+}
+.contacto-contenedor p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Formulario contacto */
+form.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+form.contacto-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #ff6f61;
+    display: block;
+}
+form.contacto-form input[type="text"],
+form.contacto-form input[type="email"],
+form.contacto-form textarea {
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 10px;
+    color: #eee;
+    padding: 12px 15px;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+form.contacto-form input[type="text"]:focus,
+form.contacto-form input[type="email"]:focus,
+form.contacto-form textarea:focus {
+    outline: none;
+    border-color: #ff6f61;
+    background-color: #3a3a3a;
+}
+form.contacto-form button {
+    background-color: #ff6f61;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 0;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+form.contacto-form button:hover {
+    background-color: #e04e3a;
+    transform: scale(1.05);
+}
